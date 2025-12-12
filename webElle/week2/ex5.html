@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My work</title>
+        <style>
+            body {
+                background-color: rgb(255, 194, 219);
+            }
+            input {
+                height: 40px;
+                width: 280px;
+                border-radius: 20px;
+                padding: 3px;
+                border-color: rgb(255, 0, 140);
+                font-size: 25px;
+                color: aliceblue;
+                font-style: calc();
+                background-color: rgb(245, 136, 178);
+            }
+            select {
+                font-size: 25px;
+                border-radius: 7px;
+                border-color: brown;
+                background-color: rgb(245, 136, 178);
+                color: aliceblue;
+                font-style: oblique;
+            }
+            option {
+                font-size: 18px;
+                color: aliceblue;
+                background-color: rgb(245, 136, 178);
+                font-style: inherit;
+            }
+            h1 {
+                font-size: 70px;
+                color: aliceblue;
+                margin-left: 37%;
+                font-style: oblique;
+            }
+            p {
+                font-size: 25px;
+                color: aliceblue;
+            }
+            h2 {
+                color: aliceblue;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello my work!!</h1>
+        <p id="show-name">ยินดีต้อนรับ:</p>
+        <input id="name-input" placeholder="กรุณากรอกชื่อผู้ใช้ของคุณ" type="text">
+
+        <h2>โปรดลือกภาษาที่คุณชอบ</h2>
+        <p id="show-language">นี่คือภาษาที่คุณชอบ:</p>
+        <select id="language-input">
+            <option>กดเพื่อเลือกภาษา</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Go</option>
+        </select>
+
+        <script>
+            const msgInputElement = document.getElementById('name-input')
+
+            msgInputElement.addEventListener("input", function() {
+                const msg = this.value
+                const showMsgElement = document.getElementById('show-name')
+                showMsgElement.innerText = 'ยินดีต้อนรับ:' + msg
+            })
+
+              const msgSelectElement = document.getElementById('language-input')
+
+            msgSelectElement.addEventListener("input", function() {
+                const msg = this.value
+                const showMsgElement = document.getElementById('show-language')
+                showMsgElement.innerText = 'นี่คือภาษาที่คุณเลือก:' + msg
+            })
+            
+        </script>
+
+    </body>
+
+</html>
