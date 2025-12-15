@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type input</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
+        .input-group { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], input[type="color"] {
+            width: 98%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        input[type="submit"] { background-color: #4CAF50; }
+        input[type="reset"] { background-color: #f44336; }
+        input[type="button"] { background-color: #008CBA; }
+    </style>
+</head>
+<body>
+
+    <h1>ตัวอย่างในการใช้ type input</h1>
+    <form action="#" method="get">
+        
+        <div class="input-group">
+            <label for="username">Text (ชื่อผู้ใช้):</label>
+            <input type="text" id="username" name="username" placeholder="ป้อนชื่อของคุณ">
+        </div>
+
+        <div class="input-group">
+            <label for="pwd">Password (รหัสผ่าน):</label>
+            <input type="password" id="pwd" name="pwd" placeholder="ป้อนรหัสผ่าน">
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="ตัวอย่าง: user@example.com">
+        </div>
+        
+        <div class="input-group">
+            <label for="dob">Date (วันเกิด):</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        
+        <div class="input-group">
+            <label for="quantity">Number (จำนวน):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+        </div>
+
+        <div class="input-group">
+            <label for="volume">Range (ระดับเสียง):</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+        </div>
+
+        <div class="input-group">
+            <label for="favcolor">Color (สีโปรด):</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        </div>
+        
+        <div class="input-group">
+            <label for="homepage">URL (เว็บไซต์):</label>
+            <input type="url" id="homepage" name="homepage" placeholder="ตัวอย่าง: https://www.google.com">
+        </div>
+
+        <div class="input-group">
+            <label>Checkbox (เลือกได้หลายอย่าง):</label>
+            <input type="checkbox" id="fruit1" name="fruit1" value="apple">
+            <label for="fruit1">แอปเปิล</label><br>
+            <input type="checkbox" id="fruit2" name="fruit2" value="banana">
+            <label for="fruit2">กล้วย</label>
+        </div>
+
+        <div class="input-group">
+            <label>Radio (เลือกได้เพียงอย่างเดียว):</label>
+            <input type="radio" id="gender_male" name="gender" value="male">
+            <label for="gender_male">ชาย</label><br>
+            <input type="radio" id="gender_female" name="gender" value="female">
+            <label for="gender_female">หญิง</label>
+        </div>
+
+        <div class="input-group">
+            <label for="myfile">File (อัปโหลดไฟล์):</label>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+
+        <input type="hidden" id="session_id" name="session_id" value="12345">
+        
+        <div class="input-group">
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset Form">
+            <input type="button" value="Custom Button" onclick="alert('ปุ่มนี้ใช้สำหรับ JavaScript');">
+        </div>
+        
+    </form>
+
+</body>
+</html>
