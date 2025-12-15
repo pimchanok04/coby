@@ -1,22 +1,135 @@
-text <input type="text"> ช่องข้อความ
-password <input type="password"> ช่องกรอก/รับรหัสผ่าน
-email <input type="email"> ช่องกรอกอีเมล/รับอีเมล
-url <input type="url"> ช่องสำหรับurl/รับที่อยู๋เว็บไซต์
-tel <input type="tel"> ช่องกรอก/รับเบอร์โทรศัพทื
-search <input type="search"> ช่องสำหรับค้นหา/ป้อนการค้นหา
-number <input type="number"> ช่องสำหรับตัวเลข
-range <input type="range"> แถบเลื่อน
-checkbox <input type="checkbox"> ช่องสำหรับทำเครื่องหมาย
-radio <input type="radio"> ปุ่มตัวเลือก
-date <input type="date"> ช่องวันที่
-time <input type="time"> ช่องเวลา
-datetime-local <input type="datetime-local"> ช่องวันที่และเวลา
-month <input type="month"> ช่องเดือน
-week <input type="week"> ช่องสัปดาห์
-color <input type="color"> ช่องสำหรับเลือกสี
-file <input type="file"> ช่องสำหรับเลือกสี
-submit <input type="submit"> ปุ่มส่งข้อมูล
-reset <input type="reset"> ปุ่มรีเซ็ต
-button <input type="button"> ปุ่มทั่วไป
-image <input type="image"> ปุ่มรูปภาพ
-hidden <input type="hidden"> ช่องที่ซ่อนเอาไว้
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการ Input Types ทั้งหมดใน HTML</title>
+    <style>
+        /* CSS ภายในไฟล์เพื่อให้แสดงผลชัดเจนขึ้น */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        fieldset { margin-bottom: 20px; border: 1px solid #ccc; padding: 15px; }
+        legend { font-weight: bold; font-size: 1.2em; color: #333; }
+        div { margin-bottom: 10px; display: flex; align-items: center; }
+        label { display: inline-block; width: 150px; margin-right: 10px; font-weight: 500; }
+        input[type="range"] { width: 200px; }
+    </style>
+</head>
+<body>
+
+    <h1>การประกาศ Input Type ใน HTML5</h1>
+    <form>
+        
+        <fieldset>
+            <legend>1. ข้อมูลข้อความและติดต่อ</legend>
+            <div>
+                <label for="txt">Text:</label>
+                <input type="text" id="txt" placeholder="ข้อความทั่วไป (Default)">
+            </div>
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" placeholder="รหัสผ่าน (ซ่อนตัวอักษร)">
+            </div>
+            <div>
+                <label for="eml">Email:</label>
+                <input type="email" id="eml" placeholder="name@example.com">
+            </div>
+            <div>
+                <label for="tel">Tel:</label>
+                <input type="tel" id="tel" placeholder="08x-xxxxxxx">
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="url" id="url" placeholder="http://www.website.com">
+            </div>
+            <div>
+                <label for="srch">Search:</label>
+                <input type="search" id="srch" placeholder="ช่องค้นหา">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>2. ตัวเลขและการเลือกค่า</legend>
+            <div>
+                <label for="num">Number:</label>
+                <input type="number" id="num" min="1" max="10" value="5">
+            </div>
+            <div>
+                <label for="rng">Range (Slider):</label>
+                <input type="range" id="rng" min="0" max="100" value="50"> <span>(0 - 100)</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. วันที่และเวลา</legend>
+            <div>
+                <label for="dt">Date:</label>
+                <input type="date" id="dt">
+            </div>
+            <div>
+                <label for="tm">Time:</label>
+                <input type="time" id="tm">
+            </div>
+            <div>
+                <label for="dtl">Datetime-Local:</label>
+                <input type="datetime-local" id="dtl">
+            </div>
+            <div>
+                <label for="mth">Month:</label>
+                <input type="month" id="mth">
+            </div>
+            <div>
+                <label for="wk">Week:</label>
+                <input type="week" id="wk">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>4. การเลือกค่า</legend>
+            <div>
+                <label for="cbox">Checkbox:</label>
+                <input type="checkbox" id="cbox" checked> ยอมรับข้อตกลง
+            </div>
+            <div>
+                <label>Radio:</label>
+                <input type="radio" name="choice" value="a"> A
+                <input type="radio" name="choice" value="b" checked> B
+                <input type="radio" name="choice" value="c"> C
+            </div>
+            <div>
+                <label for="clr">Color Picker:</label>
+                <input type="color" id="clr" value="#ff0000">
+            </div>
+            <div>
+                <label for="fil">File Upload:</label>
+                <input type="file" id="fil">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>5. ปุ่มและการกระทำ</legend>
+            <div>
+                <label>Submit:</label>
+                <input type="submit" value="ส่งข้อมูล">
+            </div>
+            <div>
+                <label>Reset:</label>
+                <input type="reset" value="ล้างฟอร์ม">
+            </div>
+            <div>
+                <label>Button:</label>
+                <input type="button" value="ปุ่มทั่วไป">
+            </div>
+            <div>
+                <label for="imgbtn">Image Button:</label>
+                <input type="image" id="imgbtn" src="https://via.placeholder.com/100x30?text=Click+Me" alt="Image Button">
+            </div>
+            <div>
+                <label>Hidden:</label>
+                <input type="hidden" name="hidden_data" value="ข้อมูลที่ซ่อนอยู่"> <span>(มองไม่เห็น)</span>
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
