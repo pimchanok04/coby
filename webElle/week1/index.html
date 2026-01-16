@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>หน้าเว็บแรกของฉัน</title>
+        <style>
+            body {
+                background-color: rgb(233, 195, 255);
+            }
+            h4 {
+                color: rgb(187, 115, 255);
+                font-size: xx-large;
+                text-align: center;
+                background-color: aliceblue;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+
+            img {
+                width: 50%;
+                background-color: rgb(179, 118, 236);
+                padding: 10%;
+                border-color: rgb(255, 255, 255);
+                border-width: 10px;
+                border-style: dotted;
+                border-radius: 20%;
+                margin-left: 11%;
+            }
+
+            button {
+                font-size: 40px;
+                background-color: rgb(195, 155, 233);
+                padding: 20px;
+                border-radius: 10px;            }
+        </style>
+    </head>
+    <body>
+        <h4 id="title-text">สวัสดีชาวโลก นี่คือเว็บของฉันนะ!!</h4>
+        <h4 style="color: rgb(187, 115, 255);">ง่วงจังเลย</h4>
+        <p>ฉันไม่รู้จะเขียนอะไรดี เลยคิดว่าจะไม่เขียน</p>
+        <a href="https://www.w3schools.com/html/html_elements.asp">เว็บเพิ่มเติม</a>
+        <img id="web-img" src="https://i.pinimg.com/736x/75/e3/6a/75e36a807702ca1315d9234e33d8e579.jpg" alt="kuromi">
+        <button onclick="sayHi()">คลิกที่นี่สิ</button>
+
+        <script>
+            let myName = 'my baby'
+            function sayHi() {
+                alert('wellcom to web' + myName)
+                const textTitleElement = document.getElementById('title-text')
+                textTitleElement.innerText = 'wellcome nakub' + myName
+                textTitleElement.style = 'color: pink; font-size: 60px;'
+
+                const webImage = document.getElementById('web-img')
+                webImage.src = "https://newwonder.co/cdn/shop/products/mymelody.png?v=1678004579"
+            }
+        </script>
+    </body>
+
+</html>

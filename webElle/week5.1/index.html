@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>เเบบฟอร์มยืมหนังสือ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="text-3xl font-bold underline">
+    </h1>
+    <div class="flex justify-center w-screen h-screen">
+        <div class="bg-white w-2/3 p-3 m-4 rounded-lg">
+            <h1 class="text-center font-bold">เเบบฟอร์มยืมหนังสือ</h1>
+            <p class="text-sm text-center">เเบบฟอร์มยืมหนังสือ สำหรับนักศึกษา</p>
+            <form>
+                <fieldset class="fieldset bg-emerald-200 border-emerald-800 rounded-box w-xs border p-4">
+                    <legend class="fieldset-legend">ข้อมูลผู้ยืม</legend>
+
+                    <label class="label">ชื่อ</label>
+                    <input type="text" class="input" placeholder="กรุณาระบุชื่อนักศึกษา" />
+                    
+                    <label class="label">นามสกุล</label>
+                    <input type="text" class="input" placeholder="กรุณาระบุนามสกุลนักศึกษา" />
+
+                    <label class="label">รหัสนักศึกษา</label>
+                    <input type="text" class="input" placeholder="กรุณาระบุรหัสนักศึกษา" />
+                </fieldset>
+                <div class="mt-10 p-3">
+                    <p>หนังสือที่ต้องการยืม</p>
+
+                    <select class="select color">
+                        <option disabled selected>กรุณาเลือกหนังสือ</option>
+                        <option>How to be a gay</option>
+                        <option>Try not to be a gay</option>
+                        <option>how to survive from gay</option>
+                        <option>how to find who are gay</option>
+                    </select>
+                    <div class="mt-10 p-3">
+                        <p>หมายเหตุ</p>
+                        <textarea class="textarea" placeholder="กรุณาระบุหมายเหตุ"></textarea>
+                    </div>
+                </div>
+                <div class="mt-10 p-3">
+                    <button class="btn btn-success w-full text-black">Success</button>
+                </div>
+
+        </div>
+        </div>
+        </form>
+        <script src="script.js"></script>
+</body>
+
+</html>
